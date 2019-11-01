@@ -58,8 +58,7 @@ public class World extends JPanel implements ActionListener {
         g.drawLine(320, 220, 320, 190);
         g.setColor(Color.WHITE);
         g.drawLine(290, 220, 260, 220);
-//        trafficLight.drawLight();
-//        add(trafficLight);
+//Drawing TrafficLight
         g.setColor(Color.GRAY);
         g.fillRect(240, 100, 20, 60);
         g.setColor(Color.RED);
@@ -94,25 +93,25 @@ public class World extends JPanel implements ActionListener {
 //    private void add(TrafficLight trafficLight) {
 //    }
 
-    private void moveLeft() {
-        velX = -1.5;
-        velY = 0;
-    }
-
-    private void moveRight() {
-        velX = 1.5;
-        velY = 0;
-    }
-
-    private void moveUp() {
-        velX = 0;
-        velY = -1.5;
-    }
-
-    private void moveDown() {
-        velX = 0;
-        velY = 1.5;
-    }
+//    private void moveLeft() {
+//        velX = -1.5;
+//        velY = 0;
+//    }
+//
+//    private void moveRight() {
+//        velX = 1.5;
+//        velY = 0;
+//    }
+//
+//    private void moveUp() {
+//        velX = 0;
+//        velY = -1.5;
+//    }
+//
+//    private void moveDown() {
+//        velX = 0;
+//        velY = 1.5;
+//    }
 
     // This action, is where the cars are being moved across the x and y coordinates 
     public void actionPerformed(ActionEvent e) {

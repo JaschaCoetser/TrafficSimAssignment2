@@ -1,13 +1,12 @@
 package Controller;
 
-import Model.TrafficLight;
 import Model.World;
 
 import javax.swing.*;
 
 // The Following Class is the controller of the program, what is needed to be run
 public class Main {
-    private static Object TrafficLight;
+//    private static Object TrafficLight;
 
     public static void main(String[] args) {
 //        World t = new World((Model.TrafficLight) TrafficLight);

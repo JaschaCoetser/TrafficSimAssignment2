@@ -1,22 +1,16 @@
 package Model;
 
+import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
-import java.awt.geom.Ellipse2D;
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import javax.swing.Timer;
 
 import static java.lang.Thread.sleep;
 
 // The following class is the TrafficLight class, this class is supposed to start and stop the set vehicles.
 public class TrafficLight extends JPanel implements ActionListener {
-    String col;
-    int x, y;
+    private String col;
+    private int x, y;
     private Object Graphics;
 
 // This default constructor is setting the positions that the traffic class is finding to make its decision on

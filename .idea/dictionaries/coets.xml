@@ -2,6 +2,10 @@
   <dictionary name="coets">
     <words>
       <w>coets</w>
+      <w>cornerint</w>
+      <w>fourwayint</w>
+      <w>roadtype</w>
+      <w>threewayint</w>
     </words>
   </dictionary>
 </component>
