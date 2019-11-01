@@ -11,13 +11,16 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.Timer;
 
-
+// The following class is the world builder, that incorporates the the entire frame 
 public class World extends JPanel implements ActionListener {
-    //    private final TrafficLight trafficLight;
-    //    TrafficLight trafficLight;
-//
+
+//// The Following imports the TrafficLight Class
+//        private final TrafficLight trafficLight;
+//        TrafficLight trafficLight;
 //    TrafficLight trafficLight = new TrafficLight(240, 100, "v");
-    private TrafficLight trafficLight = new TrafficLight();
+//    private TrafficLight trafficLight = new TrafficLight();
+
+
     //    Traffic loops, allowing the cars to move across the screen
     private Timer tm = new Timer(5, this);
     //    The following is a timer allowing the cars to move at a specific velocity
@@ -29,6 +32,8 @@ public class World extends JPanel implements ActionListener {
 //        this.trafficLight = trafficLight;
 //    }
 
+    
+//    This constructor is what paints the visual images within the frame
     public void paint(Graphics g) {
 //        TrafficLight trafficLight = new TrafficLight(240, 100, "v");
         super.paint(g);
@@ -54,15 +59,15 @@ public class World extends JPanel implements ActionListener {
         g.setColor(Color.WHITE);
         g.drawLine(290, 220, 260, 220);
 //        trafficLight.drawLight();
-        add(trafficLight);
-//        g.setColor(Color.GRAY);
-//        g.fillRect(240, 100, 20, 60);
-//        g.setColor(Color.RED);
-//        g.fillOval(240, 100, 20, 20);
-//        g.setColor(Color.YELLOW);
-//        g.fillOval(240, 120, 20, 20);
-//        g.setColor(Color.GREEN);
-//        g.fillOval(240, 140, 20, 20);
+//        add(trafficLight);
+        g.setColor(Color.GRAY);
+        g.fillRect(240, 100, 20, 60);
+        g.setColor(Color.RED);
+        g.fillOval(240, 100, 20, 20);
+        g.setColor(Color.YELLOW);
+        g.fillOval(240, 120, 20, 20);
+        g.setColor(Color.GREEN);
+        g.fillOval(240, 140, 20, 20);
 ////      Using the BufferedImage, is allowing me to import the Vehicles
         File input = new File("Resources\\Car.png");
         BufferedImage image = null;
@@ -86,34 +91,50 @@ public class World extends JPanel implements ActionListener {
         tmCar.start();
     }
 
-    private void add(TrafficLight trafficLight) {
+//    private void add(TrafficLight trafficLight) {
+//    }
+
+    private void moveLeft() {
+        velX = -1.5;
+        velY = 0;
     }
 
-//    void moveLeft() {
-//        velX = -1.5;
-//        velY = 0;
-//    }
-//
-//    void moveRight() {
-//        velX = 1.5;
-//        velY = 0;
-//    }
+    private void moveRight() {
+        velX = 1.5;
+        velY = 0;
+    }
 
+    private void moveUp() {
+        velX = 0;
+        velY = -1.5;
+    }
+
+    private void moveDown() {
+        velX = 0;
+        velY = 1.5;
+    }
+
+// This action, is where the cars are being moved across the x and y coordinates 
     public void actionPerformed(ActionEvent e) {
         do {
             if (x < 0 || x > 550)
                 velX = -velX;
+//            moveLeft();
+//            moveRight();
             x = x + velX;
             repaint();
         }
         while (x > 550);
 
-        if (y < 0 || y > 350)
-            velY = -velY;
-        y = y + velY;
-        repaint();
+
+        do {
+            if (y < 0 || y > 350)
+                velY = -velY;
+//            moveUp();
+//            moveDown();
+            y = y + velY;
+            repaint();
+        }
+        while (x > 350);
     }
-
-
 }
-
