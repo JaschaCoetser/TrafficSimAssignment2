@@ -32,8 +32,8 @@ public class World extends JPanel implements ActionListener {
 //        this.trafficLight = trafficLight;
 //    }
 
-    
-//    This constructor is what paints the visual images within the frame
+
+    //    This constructor is what paints the visual images within the frame
     public void paint(Graphics g) {
 //        TrafficLight trafficLight = new TrafficLight(240, 100, "v");
         super.paint(g);
@@ -114,18 +114,19 @@ public class World extends JPanel implements ActionListener {
         velY = 1.5;
     }
 
-// This action, is where the cars are being moved across the x and y coordinates 
+    // This action, is where the cars are being moved across the x and y coordinates 
     public void actionPerformed(ActionEvent e) {
         do {
             if (x < 0 || x > 550)
                 velX = -velX;
+
 //            moveLeft();
 //            moveRight();
             x = x + velX;
             repaint();
         }
         while (x > 550);
-
+        repaint();
 
         do {
             if (y < 0 || y > 350)
@@ -136,5 +137,6 @@ public class World extends JPanel implements ActionListener {
             repaint();
         }
         while (x > 350);
+        repaint();
     }
 }

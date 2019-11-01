@@ -1,82 +1,37 @@
 package Model;
 
-//package Model;
-//
+import org.w3c.dom.Node;
+
+
+// the following class is my assignment one vehicle class however couldn't get it working with my gui
 public class Vehicle<Color> {
-//    int x, y, v;
-//    int start_x, start_y, start_v;
-//    int w, h;
-//    Color c;
-//    String dir;
+//    // these are class variables
+//    private Node carRoad;
 //
-//    Vehicle(int x, int y, int w, int h, int v, java.awt.Color c, String dir) {
-//        this.x = x;
-//        this.y = y;
-//        this.w = w;
-//        this.h = h;
-//        this.v = v;
-//        this.c = c;
-//        this.start_x = x;
-//        this.start_y = y;
-//        this.start_v = v;
-//        this.dir = dir;
+//    // This is a non-default constructor
+//    Vehicle(Node carRoad) {
+//        this.carRoad = carRoad;
 //    }
 //
-//    int getX() {
-//        return this.x;
-//    }
-//
-//    int getY() {
-//        return this.y;
-//    }
-//
-//    int getV() {
-//        return this.v;
-//    }
-//
-//    int get_start_v() {
-//        return this.start_v;
-//    }
-//
-//    String getDir() {
-//        return this.dir;
-//    }
-//
-//
-//    void rive() {
-//
-//        if (this.dir.equals("h")) {
-//            this.x = this.x + this.v;
-//        } else {
-//            this.y = this.y + this.v;
-//        }
-//
-//        int width = 0;
-//        if (this.x > width || this.x < 0) {
-//            this.x = start_x;
-//        }
-//        int height = 0;
-//        if (this.y > height || this.y < 0) {
-//            this.y = this.start_y;
+//    // methods
+//    void moveCar() {
+//        for (int i = 0; i < 40; ++i) {
+//            if (carRoad.canGo) {
+//                carRoad.next_node.vehicle = this;
+//                carRoad.vehicle = null;
+//                this.carRoad = this.carRoad.next_node;
+////                System.out.println("Vehicle has moved to Road Position " + carRoad.roadPosition);
+//            }
 //        }
 //    }
 //
-//    //if given parameters update speed
-//    void drive(int v) {
-//        this.v = v;
-//        if (this.dir.equals("h")) {
-//            this.x = this.x + this.v;
-//        } else {
-//            this.y = this.y + this.v;
-//        }
+//    // getters and setters
 //
-//        int width = 0;
-//        if (this.x > width || this.x < 0) {
-//            this.x = this.start_x;
-//        }
-//        int height = 0;
-//        if (this.y > height || this.y < 0) {
-//            this.y = this.start_y;
-//        }
+//    public Node getCarRoad() {
+//        return carRoad;
+//    }
+//
+//    public void setCarRoad(Node carRoad) {
+//        this.carRoad = carRoad;
 //    }
 }
