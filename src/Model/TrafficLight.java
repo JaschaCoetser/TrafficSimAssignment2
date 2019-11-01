@@ -12,22 +12,22 @@ import javax.swing.*;
 import javax.swing.Timer;
 import static java.lang.Thread.sleep;
 
-
-public class TrafficLight{
-    Color go = Color.GRAY;
-    Color slow = Color.GRAY;
-    Color stop = Color.GRAY;
-
+// The following class is the TrafficLight class, this class is supposed to start and stop the set vehicles.
+public class TrafficLight extends JPanel implements ActionListener {
 //    String col;
 //    int x,y;
 //    private Object Graphics;
-//
+
+//// This default constructor is setting the positions that the traffic class is finding to make its decision on
+
 //    TrafficLight(int x, int y, String dir) {
 //        this.x = x;
 //        this.y = y;
 //        this.col = "red";
 //    }
+//
 
+//// The following is drawing the above TrafficLight
 //    void drawLight(){
 
 //        java.awt.Graphics g = null;
@@ -43,7 +43,7 @@ public class TrafficLight{
 //        g.fillOval(this.x +15, this.y +15, 20, 20);
 //        }
 
-
+//// The following constructor is setting a timer for the TrafficLight colors
 //    private void timer() {
 //        try {
 //            sleep(10);
@@ -52,35 +52,6 @@ public class TrafficLight{
 //        }
 //    }
 //
-//    public void paint(Graphics g) {
-//        super.paint(g);
-//        for (int i = 0; i < 5; i++) {
-////            g.setColor(Color.GRAY);
-////            g.fillRect(240, 100, 20,60);
-////
-////            timer();
-////            g.setColor(Color.RED);
-////            g.fillOval(240, 100,20,20);
-////            timer();
-////            g.setColor(Color.GRAY);
-////            g.fillOval(240, 100,20,20);
-////
-////            timer();
-////            g.setColor(Color.YELLOW);
-////            g.fillOval(240, 120,20,20);
-////            timer();
-////            g.setColor(Color.GRAY);
-////            g.fillOval(240, 120,20,20);
-////
-////            timer();
-////            g.setColor(Color.GREEN);
-////            g.fillOval(240, 140,20,20);
-////            timer();
-////            g.setColor(Color.GRAY);
-////            g.fillOval(240, 140,20,20);
-//
-//        }
-//    }
 
     public void actionPerformed(ActionEvent e) {
 
